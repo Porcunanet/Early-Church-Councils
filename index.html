@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Church Councils</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>PorcunaNet - IT Instructor & Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,397 +13,511 @@
         }
 
         body {
-            font-family: 'Crimson Text', serif;
-            background: #f4e8d0;
-            color: #2c1810;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #d3d3d3;
+            color: #333;
             line-height: 1.8;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
         }
 
-        .parchment {
-            background: linear-gradient(to bottom, #f4e8d0 0%, #e8dcc0 50%, #f4e8d0 100%);
-            box-shadow: inset 0 0 100px rgba(194, 165, 108, 0.3);
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
         }
 
+        /* Header */
         header {
-            background: #3d2817;
-            color: #f4e8d0;
-            padding: 1rem 0;
+            background-color: #4a4a4a;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
         }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
             align-items: center;
-            padding: 0 2rem;
+            gap: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #00ff00;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0,255,0,0.5);
         }
 
-        .nav-links {
-            display: flex;
+        .site-title {
+            font-size: 1.2rem;
+            color: #00ff00;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        nav {
+            justify-self: end;
+        }
+
+        nav ul {
             list-style: none;
-            gap: 2rem;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2.5rem;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
         }
-        
 
-        .nav-links a {
-            color: #f4e8d0;
+        nav a {
+            color: #fff;
             text-decoration: none;
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            transition: color 0.3s;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 4px;
+            font-size: 0.6rem;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 2px solid transparent;
         }
 
-        .nav-links a:hover {
-            color: #d4af37;
-            border-bottom-color: #d4af37;
+        nav a:hover {
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0,255,0,0.5);
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: #f4e8d0;
-            transition: 0.3s;
-        }
-
+        /* Main Content */
         main {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 3rem;
-            background: #faf5eb;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            border: 1px solid #d4c4a8;
+            padding: 40px 0;
         }
 
-        h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: #3d2817;
-            border-bottom: 3px solid #3d2817;
-            padding-bottom: 1rem;
+        section {
+            margin-bottom: 60px;
+            background-color: #fff;
+            padding: 40px;
+            border: 4px solid #4a4a4a;
+            box-shadow: 8px 8px 0px #333;
         }
 
         h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            margin: 2.5rem 0 1rem;
-            color: #3d2817;
-            border-left: 5px solid #d4af37;
-            padding-left: 1rem;
+            font-size: 1.5rem;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 3px 3px 0px #00ff00;
         }
 
-        h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
-            color: #4d3520;
+        /* Introduction */
+        .intro-text {
+            font-size: 0.7rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Projects Carousel */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+            border: 4px solid #4a4a4a;
+            min-height: 400px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card {
+            min-width: 100%;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: #00ff00;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .project-card a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
             font-style: italic;
         }
 
-        p {
-            margin-bottom: 1.2rem;
-            text-align: justify;
-            text-indent: 2rem;
-            font-size: 1.1rem;
+        .project-card p {
+            font-size: 0.6rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        .section {
-            margin-bottom: 3rem;
-            padding-top: 2rem;
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        ol, ul {
-            margin-left: 3rem;
-            margin-bottom: 1.5rem;
+        .carousel-btn {
+            background-color: #4a4a4a;
+            color: #00ff00;
+            border: 3px solid #00ff00;
+            padding: 10px 20px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.6rem;
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        li {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
+        .carousel-btn:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0,255,0,0.8);
         }
 
-        .ornament {
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 3px solid #4a4a4a;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 0px #00ff00;
+            border-color: #00ff00;
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #4a4a4a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ff00;
+            font-size: 0.8rem;
+            border: 2px solid #00ff00;
+        }
+
+        .skill-name {
+            font-size: 0.5rem;
             text-align: center;
-            font-size: 2rem;
-            color: #d4af37;
-            margin: 2rem 0;
+            color: #4a4a4a;
         }
 
+        /* Footer */
+        footer {
+            background-color: #2a2a2a;
+            color: #00ff00;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 4px solid #00ff00;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #4a4a4a;
+            border: 3px solid #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0,255,0,0.8);
+        }
+
+        .copyright {
+            font-size: 0.5rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                right: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: #3d2817;
-                width: 100%;
+            .header-content {
+                grid-template-columns: 1fr;
                 text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.5);
-                padding: 2rem 0;
             }
 
-            .nav-links.active {
-                right: 0;
+            .logo-section {
+                justify-content: center;
             }
 
-            .hamburger {
-                display: flex;
+            nav {
+                justify-self: center;
             }
 
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(8px, 8px);
+            nav ul {
+                justify-content: center;
             }
 
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
+            .site-title {
+                font-size: 0.9rem;
             }
 
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
-
-            main {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
+            nav a {
+                font-size: 0.5rem;
             }
 
             h2 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-            }
-
-            p {
                 font-size: 1rem;
             }
 
-            .logo {
-                font-size: 1.3rem;
+            .intro-text {
+                font-size: 0.6rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 15px;
             }
         }
+
+        @media (max-width: 480px) {
+            .site-title {
+                font-size: 0.7rem;
+            }
+
+            nav a {
+                font-size: 0.4rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+  .header-content { grid-template-columns: 1fr; }
+  .carousel { grid-auto-columns: 90%; }
+}
+
     </style>
 </head>
-<body class="parchment">
+<body>
     <header>
-        <nav>
-            <div class="logo">⚜ Church Councils ⚜</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#nicea">Nicea</a></li>
-                <li><a href="#constantinople">Constantinople</a></li>
-                <li><a href="#ephesus">Ephesus</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="img/patrick.jpeg" alt="PorcunaNet Logo" class="logo">
+                    <h1 class="site-title">PorcunaNet</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Early Ecumenical Councils</h1>
+        <div class="container">
+            <section id="intro">
+                <h2>// About Me</h2>
+                <p class="intro-text">
+                    Hello! I'm an IT instructor and technology enthusiast with a passion for teaching and exploring the ever-evolving world of technology. With expertise spanning cloud computing, web development, and databases I help others navigate the digital landscape. Empowering students with technical knowledge, I'm dedicated to making technology accessible and exciting for everyone.
+                </p>
+            </section>
 
-        <div class="ornament">❧</div>
+            <section id="projects">
+                <h2>// Projects</h2>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://delightful-pond-04c67721e.3.azurestaticapps.net/" target="_blank">The Orthodox Church</a></h3>
+                            <p>Created a webpage about the Orthodox Christian Church</p>
+                            <p>Tech Stack: HTML, CSS, JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://victorious-sand-0124d0a1e.3.azurestaticapps.net/" target="_blank">Early Church Councils</a></h3>
+                            <p>Created a webpage dedicated to Christian Early Church Counsils.</p>
+                            <p>Tech Stack: HTML, CSS, JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://calm-pebble-009e64210.2.azurestaticapps.net/" target="_blank">Christian Saints</a></h3>
+                            <p>Created a webpage dedicated to Christian Saints. Will be updated throught my spiritual journey. Glory be to Christ!</p>
+                            <p>Tech Stack: HTML, CSS, JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://wonderful-pond-064747210.1.azurestaticapps.net/" target="_blank">The Didache - A Christian Handbook</a></h3>
+                            <p>Created a webpage dedicated to The Didache, The Didache is an early Christian manual of teachings and church practices, likely written in the late first or early second century, offering guidance on morality, rituals, and church organization.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                         <div class="project-card">
+                            <h3>&gt; <a href="https://black-flower-0512a5c10.3.azurestaticapps.net/" target="_blank">Baptism & Chrismation in the Orthodox Church</a></h3>
+                            <p>Created a webpage to about Orthodox Church Baptism & Chrismation</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://thankful-stone-051e70310.1.azurestaticapps.net" target="_blank">Orthodox Church Map Finder</a></h3>
+                            <p>Created a webpage that will showcase churches that are near in the users area. Max radius 50 miles.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://purple-meadow-033f41610.3.azurestaticapps.net/" target="_blank">Prayers in Times of Need</a></h3>
+                            <p>Created a webpage Prayers in Times of Need. Orthodox Christian Faith.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                         <div class="project-card">
+                            <h3>&gt; <a href="https://kind-dune-0971ca410.3.azurestaticapps.net/" target="_blank">The Evolution of Computing</a></h3>
+                            <p>Created a webpage to teach The Evolution of Computing.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://red-water-0e0ce0610.2.azurestaticapps.net/" target="_blank">Computer Basics Tutorial</a></h3>
+                            <p>Created a webpage to teach basic computer skills to beginners.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>&gt; <a href="https://mango-desert-08327be10.2.azurestaticapps.net/" target="_blank">Web Development beginners tutorial</a></h3>
+                            <p>Created a webpage to teach basic HTML to beginners.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                         <div class="project-card">
+                            <h3>&gt; <a href="https://ambitious-smoke-06565fd10.3.azurestaticapps.net/" target="_blank">Computer Hardware tutorial</a></h3>
+                            <p>Created a webpage to teach basic Computer Hardware to beginners.</p>
+                            <p>Tech Stack: HTML, CSS, & JavaScript, GitHub & Microsoft Azure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="moveCarousel(-1)">◄ Prev</button>
+                    <button class="carousel-btn" onclick="moveCarousel(1)">Next ►</button>
+                </div>
+            </section>
 
-        <section id="nicea" class="section">
-            <h2>Council of Nicea</h2>
-            
-            <h3>Back-round:</h3>
-            <p>The council of Nicea was the first ecumenical council, and it changed the face and administration of Christianity forever. It was the first council to bring all the bishops of the world (at least all were invited) together to decide on doctrinal and pastoral issues in the church, and it was the first time any official statement of faith was constructed. Obviously for such a gathering of bishops to have taken place the issue at stake must have been seen as of the utmost importance. This issue was the famous Arian heresy. The council of Nicea also changed the Roman civilisation, as it marked the first instance where Christianity was enforced by the state, making it clear where the church stood with regards the state (this was evidenced at the close of the council where anyone condemned by the council was no longer only punished by the church (excommunicated), but also by the state (exiled, writings burned, and sometimes tortured or killed)).</p>
-
-            <p>Arius was a priest ordained by Pope Peter in 313, but shortly became the centre of controversy in Christendom. Arius's theory of Christ was that if the Father had begotten the Son then there was a time when the Son was begotten, that is to say, there was a time when the Son was not. This then means that Christ was not in fact equal to the Father, but was the Father's first creation, made in order to create the world. Arius was thought to have been influenced by the teachings of Paul of Samosata, and Lucian of Antioch (Paul's pupil), and it is interesting to note that both sides of this controversy can use Origen to defend themselves.</p>
-
-            <p>Arius's theology of the Son was unacceptable to the Alexandrian see (under Pope Alexander at that time), and despite a slow start in condemning the heresy Pope Alexander called a local synod in 321 with 100 Egyptian bishops and deposed Arius and his heresy. The reason for the initial laxity in defending against Arianism was that early on it did not seem to be obstructing the peace of the church. But Arius was a tactful and clever man and began to put his theology in the form of catchy songs so that it would appeal to and be learnt by the masses. Thus, Arianism developed a huge following including bishops like Eusebius of Nicomedia (also pupil of Lucian, relation to the royal family and later bishop of Constantinople), and Eusebius of Caesarea (the historian). It was clear that Arianism was breaking down the fabric of the church and thus Alexander began to act.</p>
-
-            <p>In 324 Constantine became sole emperor of Rome, and he had Christianity as the official religion of Rome, and the unity of the church as his main interest. The deposition of Arius by a local synod was not enough to quell the heresy as by this point it had such a large following (most notably Eusebius of Nicomedia who held a strong influence on the royal family). Constantine, who wanted to get a hold over the escalating tension send out his religious advisor Bishop Hosius of Cordoba to investigate the problem. Bishop Hosius was an elderly bishop who was persecuted and tortured under the rule of Maximian, and was thus a well respected Bishop. Bishop Hosius tried to reconcile Arius and Alexander in 323, but failed to do so, and the process realised the danger of this controversy. On his way home to report back to Constantine he presided over a local council in Antioch which condemned Arius and his followers. Upon returning home Bishop Hosius recommended a universal council to once and for all condemn this heresy which appeared to negate the underlying teachings of Christianity and the salvation therein. Thus, Constantine called a universal council in 325 with delegates from all over Christendom to deliberate on this issue, in a town called Nicea.</p>
-
-            <h3>The Council:</h3>
-            <p>There is some contention as to the number of Bishops that attended the council but the figure 318 as given by St. Athanasius (who was in attendance), is the widely accepted figure. This is a small number compared to the total of 1800 in the empire at the time, even though all 1800 received invitations. The vast majority of these bishops were from the east, including the Patriarchs of the major sees at the time: Alexander of Alexandria, Eustathius of Antioch, and Macarius of Jerusalem. Other notable names from the east were that of the two Eusebius's, and Constantinople was represented by a presbyter. The west was very weakly represented with Rome (under Pope Sylvester I) being represented by 2 presbyters (Victor and Vincentius) and Bishops from only 5 other provinces (Hosius included). Constantine himself was also in attendance. One last remarkable attendee of the council was the young deacon of Pope Alexander, St. Athanasius, who despite the decisions of the council went on to spend the rest of his life fighting this self same heresy.</p>
-
-            <h3>The Arian Controversy:</h3>
-            <p>There were 3 apparent sides at the outset of the council. The first and smallest was that headed by Eusebius of Nicomedia which held the Arian conception, there was a slightly larger group headed by the Alexander, Eustathius of Antioch, Marcellus of Ancyra and Hosius of Cordoba, which held the orthodox, or homo-ousian view. And then there was the third party which was composed of the majority which rejected the Arian notion and refused the orthodox perspective that is to say, they were merely competent to establish negations, but lacked the capacity, as yet, to give their attitude of compromise a positive expression.</p>
-
-            <p>The first proclamation of faith was issued by the Arians, which, once read, caused such a stir, there was no fathomable way that such a confession would have been accepted by the council. At this point most of the Bishops within the Arian party abandoned such a cause, as hearing such a proclamation brought the realization of how repugnant such a doctrine was to Christianity. Eusebius of Caesarea then proposed a baptismal creed from his community, which outdated the controversy at hand but was accepted by both parties. If this creed was accepted it would have contributed nothing to the controversy and would have meant that the council refused to define its position with regards this controversy. Something more was needed. On top of this the fact that the Arian party accepted this creed set off alarm bells, as the orthodox party wanted a statement of faith that no true Arian could adhere to. Further still, this creed eluded the key Alexandrian terminology, specifically homo-ousios (of the same essence).</p>
-
-            <p>Hosius of Cordoba then proposed another creed, which is believed to be a modified Caesarean creed, with deletion of certain passages and the insertion of the Alexandrian passwords (again specifically homo-ousios). Thus the Nicean Creed was formed and it read:</p>
-
-            <p style="font-style: italic; padding-left: 2rem; margin: 1.5rem 0;">We believe in one God, the Father Almighty, Maker of all things visible and invisible. And in one Lord Jesus Christ, the Son of God, begotten of the Father [the only-begotten; that is, of the essence of the Father, God of God], Light of Light, very God of very God, begotten, not made, being of one substance (homo-ousios) with the Father; by whom all things were made [both in heaven and on earth]; who for us men, and for our salvation, came down and was incarnate and was made man; he suffered, and the third day he rose again, ascended into heaven; from thence he shall come to judge the quick and the dead. And in the Holy Ghost. [But those who say: 'There was a time when he was not;' and 'He was not before he was made;' and 'He was made out of nothing,' or 'He is of another substance' or 'essence,' or 'The Son of God is created,' or 'changeable,' or 'alterable' — they are anathematised by the holy catholic and apostolic Church.]</p>
-
-            <p>This creed was accepted unanimously by the Bishops of the council, bar 2 Bishops from Egypt, Theonas of Marmarica and Secondus of Ptolemais, and Arius himself. As was noted previously the state now took it upon itself to impose the decisions of the council and thus these three were excommunicated from the church and exiled to Illaria and Arius's writings were ordered to be burnt.</p>
-
-            <h3>Other Issues:</h3>
-            <p>This council did not only deal with the Arian controversy although this was the biggest issue on the agenda at the council, but also other matter affecting the church at the time. One such matter was the date of the Christian Passover. Over time different sees had developed their own ways of deciding when Easter was supposed to be held, but it was decided that historically and scripturally it was end of the Jewish Passover, and at the beginning of the spring season. An official date was not set, but it was agreed that the Pope of Alexandria would send a paschal letter declaring the date every year (which was a subsequent matter of conflict).</p>
-
-            <p>Another conflict on the agenda was the Meletian schism. It was decided to be lenient with Meletius (a Bishop who disputed with Alexander's predecessor Pope Peter, on the treatment of the abjured, and who led a schism ordaining his own clergy), allowing him to retain the "bare name of his office" without ordination privileges. Those he ordained were to be admitted to the church with their rank but were to be second to the clergy ordained by the rightful Popes (Peter, Archillus and Alexander).</p>
-
-            <p>The council also produced 20 further canons laying down certain rules:</p>
-            <ol>
-                <li>prohibition of self-castration;</li>
-                <li>establishment of a minimum term for catechumen;</li>
-                <li>prohibition of the presence in the house of a cleric of a younger woman who might bring him under suspicion;</li>
-                <li>ordination of a bishop in the presence of at least three provincial bishops and confirmation by the metropolitan;</li>
-                <li>provision for two provincial synods to be held annually;</li>
-                <li>exceptional authority acknowledged for the patriarchs of Alexandria and Rome, for their respective regions;</li>
-                <li>recognition of the honorary rights of the see of Jerusalem;</li>
-                <li>provision for agreement with the Novatianists;</li>
-                <li>provision for mild procedure against the lapsed during the persecution under Licinius;</li>
-                <li>prohibition of the removal of priests;</li>
-                <li>prohibition of usury among the clergy;</li>
-                <li>precedence of bishops and presbyters before deacons in receiving Holy Communion, the Eucharist;</li>
-                <li>declaration of the invalidity of baptism by Paulian heretics;</li>
-                <li>prohibition of kneeling during the liturgy, on Sundays and in the fifty days of Eastertide ("the pentecost").</li>
-            </ol>
-
-            <h3>Outcome of the Council:</h3>
-            <p>The Orthodox church had won an intellectual battle against the Arian controversy, but on a practical level the battle was far from won. The artificial unity afforded by the signing of the creed was no ratification of peace: in fact, it paved the way for a struggle which convulsed the whole empire. For it was the proclamation of the Nicene Creed that first opened the eyes of many bishops to the significance of the problem and the implications of adhering to a particular doctrine of faith. If the whole council had understood the creed and what they affirmed by signing the creed, it would be fair to say that the Arian heresy would have been quelled in 325 at the close of this first ecumenical council. However, Arianism lived on in a most virulent form for half a century afterwards. It is then necessary to conclude that the decisions of the council did not reflect the inward convictions of the majority attending the council. Instead, it is clear that the majority were swayed by the more eloquent of convincing side of the argument.</p>
-
-            <p>In spite of the inner faith of the council, the creed and doctrine of faith it produced goes down in history with reverence by Christian denominations everywhere, and is in fact the statement of faith (with later additions) that Christians use till this day.</p>
-        </section>
-
-        <div class="ornament">❦</div>
-
-        <section id="constantinople" class="section">
-            <h2>Council of Constantinople</h2>
-            
-            <h3>Back-round:</h3>
-            <p>The council of Nicea, whilst winning an intellectual battle against Arianism, by no means wiped out the heresy. This was not achieved for another half a century till the second ecumenical council held in Constantinople. Further, Nicea did not elaborate on the Holy Spirit, but the sole emphasis was on the divinity of the Son. Thus it is no surprise that a new heresy sprung up contending the divinity of the Holy Spirit. This new heresy was led by Macedonius (Bishop of Constantinople till 360) who left his heresy after his death. This new sect was also named pneumatomachi, which means "those who fight against the Holy Spirit". It is also interesting to note that at the time of the ordination of the Bishop of Constantinople Macedonius was heavily backed by the Arian parties at the time.</p>
-
-            <p>Another heresy that presented itself during this tumultuous period of church history was that of Appolinarius, Bishop of Laodicea. Appolinarius was an Arian antagonist and friend of St. Athanasius and of St. Basil, and a well respected Bishop and theologian at the time. In his zeal to fight other heresies, particularly the Arian heresy, and to defend the divinity of Christ he went s far as to say that Christ adopted a human body and a human soul but not a human spirit (the centre of reason), and as such could not sin. The Logos (Word) took the place of this spirit, thus Christ was fully divine, but only incomplete human. This heresy became the basis of many Monophysite heresies in the future, and was used to condemn and accuse saints like St. Cyril and Dioscorus on the pretence that they were Appolinarian. Due to the respect to his person St. Athanasius, Epiphanius, the two Gregory's and St Basil (who were fighting this heresy) were very soft and embarrassed in their attempts to quash the heresy.</p>
-
-            <p>Other heresies were also around at this tempestuous time, which needed to be addressed in an official way to rid Christianity of them for good. One such heresy was that of the Eunomians which was an ultra-Arian heresy that made the Son less than the Father. This heresy was mainly combated by the Cappadocian Fathers (St. Basil and the 2 Gregory's). Another heresy which was seen much earlier was that of Sabellius, which founded Sabellianism or modalism, which held that the Father, the Son and the Holy Spirit were different modes of the same God, just holding different appearances or modes depending on the time or circumstances.</p>
-
-            <p>At the time also a new Bishop was required for the see of Constantinople, and the candidate backed by the emperor Theodosius and the East (aside from Egypt) was St. Gregory of Nazianzus (known as the Theologian). But since he was Bishop of Sasima (as appointed by St Basil to retain control of Cappadocia) there needed to be a synod to put him in this new position. Further, the West and the Alexandrian Bishops favoured Gregory's rival Maximus the Cynic, who was secretly ordained into the position. The official ranking of Constantinople also needed to be addressed.</p>
-
-            <p>It was clear that theology was going through a tumultuous period and that there were many different schools of thought going around, and that there needed to be some sort of official decree on what the true doctrine was, and definitely on what the true doctrine was not. So in 381 the emperor Theodosius called an ecumenical synod in the city of Constantinople to address all these issues.</p>
-
-            <h3>The Council:</h3>
-            <p>Like the Council of Nicea the west was poorly represented if at all, whilst the 150 Bishops to attend were from the eastern provinces. Melitius, Bishop of Antioch, first presided over the council. Whilst he presided Maximus was condemned and his claim to the bishopric was rejected. St. Gregory was affirmed as the rightful Bishop of Constantinople, and upon Melitius' in the middle of the council St. Gregory was appointed president of the council. However, upon Pope Timothy's arrival to the council, he contended the appointment of St. Gregory on the grounds of the 15th canon from Nicea, which held that a Bishop is bound to his bishopric except in special circumstances. St. Gregory's appointment was thus reversed and St. Gregory retired from the episcopacy disgruntled with the whole synodical process and the actions of Bishops therein. Senator Nectarius (a friend of St. Basil, and not yet baptised) was then baptised and ordained into the post of Bishop of Constantinople, and he presided over the council till its closer.</p>
-
-            <p>The council produced 7 canons (notably only the first 4 are accepted by the Western Church whilst all 7 were accepted by the Eastern Church on account of the west claiming that the last 3 canons were added in much later). The council then went on to discuss and condemn the Macedonian heresy, and to re-affirm the Nicene Creed. But to ensure that such a heresy never arises again, and to confirm that the Holy Spirit is consubstantial with God, and that the Christian faith is a Trinitarian faith, an addition was made to the Nicene Creed:</p>
-
-            <p style="font-style: italic; padding-left: 2rem; margin: 1.5rem 0;">And in the Spirit, the holy, the lordly and life-giving one, proceeding forth from the Father, co-worshipped and co-glorified with Father and Son, the one who spoke through the prophets; in one, holy, catholic and apostolic church.</p>
-
-            <p>The council also in its first canon condemned all the other heresies above:</p>
-
-            <p style="font-style: italic; padding-left: 2rem; margin: 1.5rem 0;">The profession of faith of the holy fathers who gathered in Nicaea in Bithynia is not to be abrogated, but it is to remain in force. Every heresy is to be anathematised and in particular that of the Eunomians or Anomoeans, that of the Arians or Eudoxians, that of the Semi-Arians or Pneumatomachi, that of the Sabellians that of the Marcellians, that of the Photinians and that of the Apollinarians.</p>
-
-            <p>As noted earlier the idea of Bishops not intruding on other bishoprics was already discussed with reference to St. Gregory of Nazianzus and was made official again in the second canon. The famous 3rd canon was the canon which rose the status of the see of Constantinople to 2nd to Rome on account of it being the "new Rome" (although Rome claims authority due to apostolic succession). And again as noted previously the 4th canon was to repudiate Maximus. The 6th canon is also interesting top note as it spells out conditions for accusations of heresy. It states at the end that f someone misaims a heresy they must be ready to pay the equal penalty as accused. This notion came into play in the 2nd council of Ephesus against Bishops like Flavian, and was a major source of conflict. The 7th is to do with accepting heretics back (one remarkable point to take is that certain heresies like the Eunomians required re-baptism, to show the seriousness of certain heresies, whilst some, including the Macedonians and Arians only required anointment).</p>
-
-            <h3>Outcomes of the Council:</h3>
-            <p>This council signed the close of the Arian heresy in the empire (except in some Germanic states) for good. This council was a triumph for Nicean theology in all avenues. However, the raising of the Constantinople see brought about new tensions between Rome and Constantinople and even Alexandria and Constantinople. And with the Trinitarian theology nicely grappled and articulated, this paved the way for the next wave of heresies which were to do with Christology since as of yet such issues had never come to the fore.</p>
-
-            <h3>Saint Timothy I</h3>
-            <p>Saint Timothy was the 22nd patriarch of the see of St Mark (380-385). Timothy was unanimously elected to succeed Pope Peter II. An elderly man at the time of his election, Timothy was associated with St Athanasius in his early years and must have been profoundly influenced by his theology. He is known to have disposed of his worldly possessions in favor of the church and the poorer folks of his Christian community.</p>
-
-            <p>His reign was relatively peaceful, and the major event of his time was the famous council of Constantinople. The council was summoned in May 381 by the Emperor Theodosius, who was eager to ensure unity in the empire after the defeat of the Arians, the triumph of Athanasian orthodoxy, and the confirmation of the Nicean Creed. Participants in the council numbered 150 orthodox bishops and 36 Macedonians, who were regarded as heretics. The Egyptian patriarch and his suffragan bishops arrived a little late to find Gregory of Nazianzus, bishop of Constantinople, and Meletius, bishop of Antioch, presiding over the council, which seems to have irked the Egyptian delegation. However Meletius died during the meeting and Gregory resigned form his see. The appointment of Nectarius to succeed Gregory as Bishop of the Byzantine capital was ratified by the council. It would seem that Timothy assumed the presidency of the council in that period. Although Rome was not represented at the council, its decisions were binding to both east and west. The Nicene doctrine concerning the divinity and the humanity of the person of Jesus was ratified and the heresy of Appolinarianism was condemned. The question of the indivisibility of the Holy Spirit from the Father and the Son was also settled at this council. On the ecclesiastical front, Flavian the brother of Paulinus was nominated to succeed Meletius as bishop of Antioch. The problem of episocopal rank was discussed and the primacy of Rome was confirmed. Henceforth, the bishop of Constantinople came second, the bishop of Alexandria third, the bishop of Antioch fourth, and the bishop of Jerusalem fifth.</p>
-
-            <p>Timothy was a great supporter of monastic orders, and he is known to have recorded the lives of eminent monks, now lost and known only throught the works of Sozomen, who used them as sources. Timothy is also known to have made a number of responses to clerical questions and his answers became part of the church legal system.</p>
-        </section>
-
-        <div class="ornament">✠</div>
-
-        <section id="ephesus" class="section">
-            <h2>Council of Ephesus</h2>
-            
-            <h3>Back-round:</h3>
-            <p>Now that the trinity was clarified in the minds of the orthodox, the question of Christology became the contentious subject. At the time there were 3 different schools of thought on the nature of Christ. Whilst each was not heretical, each leaned to its own mode of heresy, which is why these schools of thought were the instigating factor in the heresies to come and the political animosity which ultimately led to the first major schism in Chalcedon in 451.</p>
-
-            <p>The first school of thought was that held by Tertullian and the West, which held that that the person of Christ was one with the full human nature and the full divine nature united together unmixed. Further than this the West did not elaborate; they were contented with this notion and left deeper theological thought to the more apt East. The second school of thought was that held by the Antiochian see. This view placed more emphasis on the human nature of Christ, whilst fully acknowledging his divine character. We will see that although not wrong in any way, this school of thought paved the way to the Nestorian heresy. The last school of thought was that of the most apt theological thinkers, that of the Alexandrian school. This stemmed from Athanasius' teaching and put more emphasis on the divine nature of Christ whilst fully acknowledging the human nature. Again we will see how much later on this stemmed the Eutychian heresy (even though far from heresy in and of itself) which was the catalyst for the Chalcedonian schism.</p>
-
-            <p>This Antiochian view was furthered by Diodore of Tarsus, who re-founded and headed the School in Alexandria. Among his pupils were Theodore of Mopsuestia and St. John Chrysostom. When Diodore went to become Bishop of Tarsus Theodore became the head of the school. Together the teachings of these two were very much against the heresies of Arius and Appolinarius, so much so that they insisted that Christ had both a divine and a human soul, which were connected but distinct. They began to attribute different actions of Christ to different parts of Christ (i.e. only the human form suffered etc…). This was very different to the theology of Cyril who taught that Christ was fully human and fully divine in a complete union, and after the union it would be erroneous to speak of the two distinctly. Thus the argument began to centre around the word "theotokos" which means "Mother of God". In English this word puts more emphasis on the "Mother" whilst in Greek this word puts more emphasis on the concept of "God". A denial of this term then is a denial that the person born of the Virgin Mary was God at all.</p>
-
-            <p>This was pushed to the fore in 428 when Nestorius, a famous monk and former pupil of Theodore of Mopsuestia, became the Bishop of Constantinople. Nestorius was a strong adherent to the Antiochian theology and had a strong repugnancy to the term Theotokos. Instead Nestorius preferred the term "Christokos" which translates to "mother of Christ" suggesting that the Virgin St. Mary gave birth to the human person of Christ not the divine person. To St. Cyril this effectively divided the Son into two persons; the human person and the divine person which acted separately. Nestorius saw the two natures in Chirst as more of a moral conjunction or a merging of wills, which was altogether unacceptable to St. Cyril.</p>
-
-            <p>Cyril attempted to show Nestorius the error of his ways by writing letters to him explaining the true theology and the problem with his theology. However, Nestorius simply wrote letters back explaining his theology and insisting on this train of thought. With little left to do Cyril convoked a local synod in Alexandria which condemned Nestorius and added an introduction to the creed which the Copts still pray till today. Cyril also wrote letters to the Emperor the Empress the Emperor's sister, Pulcheria, and many Bishops from both the east and the west including the Roman Bishop (Celestine) who himself convoked a local synod and deposed Nestorius in 430. Cyril also wrote letters to the monks in Egypt to warn them against such a heresy. Cyril wrote a final letter to Nestorius with 12 anathemas against any such view, which Nestorius rejected and in fact responded with 12 counter anathemas directly opposing the original 12. These counter anathemas were put together by not only Nestorius but John of Antioch and Theodoret of Cyrrhus. The problem had thus escalated to such a degree that Nestorius appealed to the Emperor Theodosius II (who sided with Nestorius) to hold an ecumenical synod. With his western partner Valentinian II, Theodosius called a universal council in Ephesus to be started on Pentecost.</p>
-
-            <p>Besides the Nestorian heresy another heresy was also present at the time. This was the Pelagian heresy as taught at the time by Celestius. This heresy was aimed at the original sin, and claimed that the original sin did not in fact taint our human nature. Adam's act in the original sin was simply a bad example for us, and Christ (the second Adam) came to show us a good example. According to Palagius humans have full control to attain salvation for themselves via asceticism and thus needed Christ's good example to understand how to go about acquiring this salvation. Thus things like Baptism, and grace, and Christ's death become trivialities. This heresy was fought with vehemence in the west by the likes of St. Augustine and St. Jerome. Another ridiculous sect which arose was that of the Messalians which taught such nonsense as, Lucifer as the elder son of God, and, based on the idea that the direct descendants of Adam and Eve had to practice it to procreate, admitted incest among their members. Homosexuality was also considered a natural practice among them, and virginity in women had no value to the members of this sect.</p>
-
-            <h3>The Council:</h3>
-            <p>Cyril arrived with 50 Bishops before Pentecost, as did Nestorius with his 16 support Bishops. However, some Bishops (namely John of Antioch) were running late to the meeting. The Roman delegates (two Bishops) were also delayed in arriving. The emperor himself was not present at the council but captain of his guards (Candidian) was there to ensure order. St. Cyril and the majority of the Bishops present were convinced that John of Antioch's delay was intentional. So on 22nd June the council was opened with 160 Bishops (by evening there were about 200 Bishops present). Nestorius refused to attend until all the Bishops were present, despite three summons. He was supported by Candidian and many Bishops including Theodoret, in his request to wait for all the Bishops to attend. This council deposed and condemned Nestorius, re-affirmed the Nicene faith, and affirmed Cyril's 12 anathemas.</p>
-
-            <p>5 days later John of Antioch did arrive and a counter council was held which deposed Cyril and Memnon (local Bishop of Ephesus, who supported Cyril whole heartedly). It was also decided that the rest of the Bishops which attended the original council would be forgiven as long as they rejected the 12 anathema's of Cyril. This council also held the support of the Candidian. On the 10th of July the Papal delegates finally arrived and a second session of the original council was held which re-affirmed their decisions. 5 subsequent sessions were held which ended in the favour of Cyril who had the support of the majority of the Bishops including the Romans. The Nestorians on the other hand had the support of the emperor who they appealed to. The emperor upheld the decisions of both parties, so Cyril, Memnon and Nestorius were exiled. However upon later deliberation, in October of the same year, Cyril and Memnon were set free, the council was dissolved and Nestorius was left exiled and condemned.</p>
-
-            <p>The council left 8 canons behind. The first was to condemn the Pelagian heresy and Celestius (who taught the heresy). Canons 2-5 condemned the Nestorian heresy, and the 6th canon condemned anyone who did not abide by the canons laid down in Ephesus and the 7th was to re-affirm the Nicene faith. In the seventh and last session on 31 July the bishops of Cyprus persuaded the council to approve their claim of having been anciently and rightly exempt from the jurisdiction of Antioch, and this was expressly stated in the 8th canon. Further, this council left a definition against the Messalians condemning them and their practices.</p>
-
-            <h3>Aftermath and Outcome:</h3>
-            <p>In 433 Theodoret composed a statement of faith, which John of Antioch sent to Cyril in an attempt at reunion. This formula read:</p>
-
-            <p style="font-style: italic; padding-left: 2rem; margin: 1.5rem 0;">We will state briefly what we are convinced of and profess about the God-bearing virgin and the manner of the incarnation of the only begotten Son of God—not by way of addition but in the manner of a full statement, even as we have received and possess it from of old from the holy scriptures and from the tradition of the holy fathers, adding nothing at all to the creed put forward by the holy fathers at Nicaea. For, as we have just said, that creed is sufficient both for the knowledge of godliness and for the repudiation of all heretical false teaching. We shall speak not presuming to approach the unapproachable; but we confess our own weakness and so shut out those who would reproach us for investigating things beyond the human mind.</p>
-
-            <p style="font-style: italic; padding-left: 2rem; margin: 1.5rem 0;">We confess, then, our lord Jesus Christ, the only begotten Son of God perfect God and perfect man of a rational soul and a body, begotten before all ages from the Father in his godhead, the same in the last days, for us and for our salvation, born of Mary the virgin, according to his humanity, one and the same consubstantial with the Father in godhead and consubstantial with us in humanity, for a union of two natures took place. Therefore we confess one Christ, one Son, one Lord. According to this understanding of the unconfused union, we confess the holy virgin to be the mother of God because God the Word took flesh and became man and from his very conception united to himself the temple he took from her. As to the evangelical and apostolic expressions about the Lord, we know that theologians treat some in common as of one person and distinguish others as of two natures, and interpret the god-befitting ones in connection with the godhead of Christ and the lowly ones with his humanity.</p>
-
-            <p>Cyril accepted this formula but made sure to clarify some point in a letter to John of Antioch afterwards. Cyril also insisted on the condemnation of Nestorius which for the sake of peace the Antiochians accepted to do. However Theodoret accepted the union but refused to condemn Nestorius. It was clear then, that neither party was completely happy with this reunion, and this proved to be the case two decades later when the problem escalated to new heights at the council of Chalcedon in 451.</p>
-        </section>
-
-        <div class="ornament">⁂</div>
-
-        <footer style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #3d2817; color: #4d3520; font-style: italic;">
-            Documents of the Early Church Councils
-        </footer>
+            <section id="skills">
+                <h2>// Skills & Certifications</h2>
+                <div class="skills-grid">
+                    <a href="https://learn.microsoft.com/en-us/certifications/" target="_blank" class="skill-item">
+                        <div class="skill-icon">AZ</div>
+                        <span class="skill-name">Microsoft Azure</span>
+                    </a>
+                    <div class="skill-item">
+                        <div class="skill-icon">{ }</div>
+                        <span class="skill-name">HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">{ }</div>
+                        <span class="skill-name">CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">JS</div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">DB</div>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">Py</div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🐧</div>
+                        <span class="skill-name">Linux</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🍎</div>
+                        <span class="skill-name">Apple</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⊞</div>
+                        <span class="skill-name">Windows</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">G</div>
+                        <span class="skill-name">GitHub</span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/Porcunanet" target="_blank" class="social-icon" aria-label="GitHub">G</a>
+                <a href="https://www.linkedin.com/in/porcuna/" target="_blank" class="social-icon" aria-label="LinkedIn">in</a>
+                <a href="https://x.com/Porcuna_net" target="_blank" class="social-icon" aria-label="Twitter">X</a>
+                <a href="https://www.youtube.com/@PorcunaNet" target="_blank" class="social-icon" aria-label="YouTube">Y</a>
+            </div>
+            <p class="copyright">© 2025 PorcunaNet. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.project-card');
+        const totalSlides = slides.length;
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            
+            const track = document.querySelector('.carousel-track');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
     </script>
 </body>
 </html>
